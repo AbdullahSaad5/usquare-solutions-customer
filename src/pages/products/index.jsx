@@ -8,12 +8,12 @@ import { useStyles } from "./styles";
 
 const Products = () => {
   const { classes } = useStyles();
-  const [portflio, setPortflio] = useState([]);
+  const [portfolio, setPortfolio] = useState([]);
   const [loading, setLoading] = useState(false);
   useEffect(() => {
     setLoading(true);
     axios.get(backendUrl + "/product/get_all").then((res) => {
-      setPortflio(res.data.data);
+      setPortfolio(res.data);
       setLoading(false);
     });
   }, []);
@@ -39,8 +39,8 @@ const Products = () => {
         {loading ? (
           <Loader m="auto" />
         ) : (
-          portflio.map((obj, ind) => {
-            return <ProjectCard obj={obj} ind={ind} key={ind} />;
+          portfolio.map((obj, id) => {
+            return <ProjectCard obj={obj} ind={id} key={id} />;
           })
         )}
       </Flex>

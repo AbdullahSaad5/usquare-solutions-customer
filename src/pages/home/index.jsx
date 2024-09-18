@@ -8,7 +8,7 @@ import {
   Title,
 } from "@mantine/core";
 import { useMediaQuery } from "@mantine/hooks";
-import React from "react";
+
 import { useNavigate } from "react-router-dom";
 import img from "../../assets/home.png";
 import About from "./About";
@@ -39,8 +39,7 @@ const Home = () => {
           <Title>Welcome to Usquare Solutions…</Title>
           <Text>
             We are a leading digital agency providing the ideal technology
-            solutions to all your Development needs, serving globally over the 8
-            years.
+            solutions to all your Development needs, serving globally since 2017.
           </Text>
           <Button
             variant="white"

@@ -1,7 +1,7 @@
 import { Carousel } from "@mantine/carousel";
 import { Box, Flex, Loader, Title, useMantineTheme } from "@mantine/core";
 import { useMediaQuery } from "@mantine/hooks";
-import React, { useEffect, useState } from "react";
+import  { useEffect, useState } from "react";
 import img from "../../assets/home2.png";
 import TetstimonialCard from "./TestimonialCard";
 import { useStyles } from "./styles";

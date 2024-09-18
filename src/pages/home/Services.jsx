@@ -1,5 +1,6 @@
+/* eslint-disable react/no-unescaped-entities */
 import { Box, Loader, Title, useMantineTheme } from "@mantine/core";
-import React, { useEffect, useState } from "react";
+import  { useEffect, useState } from "react";
 import { useStyles } from "./styles";
 import ServiceCard from "./ServiceCard";
 import { Carousel } from "@mantine/carousel";
@@ -49,7 +50,7 @@ const Services = () => {
                 key={ind}
                 style={{ display: "flex", justifyContent: "center" }}
               >
-                <ServiceCard title={obj?.name} description={obj?.description} />
+                <ServiceCard title={obj?.title} description={obj?.description} />
               </Carousel.Slide>
             );
           })

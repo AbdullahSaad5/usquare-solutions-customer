@@ -1,5 +1,7 @@
+/* eslint-disable no-unused-vars */
+/* eslint-disable react/prop-types */
 import { Anchor, Box, Group, Stack, Text, Title } from "@mantine/core";
-import React from "react";
+
 import { useStyles } from "./styles";
 import { ChevronRight } from "tabler-icons-react";
 import { useNavigate } from "react-router-dom";

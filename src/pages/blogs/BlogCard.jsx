@@ -1,13 +1,14 @@
+/* eslint-disable react/prop-types */
 import { Image, Stack, Text, useMantineTheme } from "@mantine/core";
-import React, { useState } from "react";
+
 import { useNavigate } from "react-router-dom";
 
-const BlogCard = ({ obj, ind }) => {
+const BlogCard = ({ obj, _id }) => {
   const theme = useMantineTheme();
   const navigate = useNavigate();
   return (
     <Stack
-      key={ind}
+      key={_id}
       p="10px"
       spacing={"xs"}
       style={{
@@ -18,17 +19,17 @@ const BlogCard = ({ obj, ind }) => {
       }}
       onClick={() => navigate("/view-blog", { state: { blogData: obj } })}
     >
-      <Image src={obj?.picture} height={"280px"} />
+      <Image src={obj?.blogImage} height={"280px"} />
       <Text fz="xs" align="left">
         Published:{" "}
-        {new Date(obj?.date_time).getDate() +
+        {new Date(obj?.createdAt).getDate() +
           "-" +
-          new Date(obj?.date_time).getMonth() +
+          new Date(obj?.createdAt).getMonth() +
           "-" +
-          new Date(obj?.date_time).getFullYear()}
+          new Date(obj?.createdAt).getFullYear()}
       </Text>
       <Text fw={"bold"} fz={"lg"} color={theme.colors.blue} align="left">
-        {obj?.title}
+        {obj?.blogTitle}
       </Text>
       <Text fz="lg" align="left">
         {obj?.short_description}

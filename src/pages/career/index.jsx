@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import {
   Box,
   Stack,
@@ -5,7 +6,7 @@ import {
   useMantineTheme
 } from "@mantine/core";
 import axios from "axios";
-import React, { useEffect, useState } from "react";
+import  { useEffect, useState } from "react";
 import career from "../../assets/career.jpg";
 import { backendUrl } from "../../constants";
 import About from "../home/About";
@@ -18,7 +19,7 @@ const Career = () => {
   const [jobs, setJobs] = useState([]);
   useEffect(() => {
     axios
-      .get(backendUrl + "/career/get_all")
+      .get(backendUrl + "/job/get_all")
       .then((res) => setJobs(res.data.data));
   }, []);
   return (

@@ -1,3 +1,5 @@
+/* eslint-disable no-unused-vars */
+/* eslint-disable react/prop-types */
 import { Avatar, Box, Image, Text, Title } from "@mantine/core";
 import React from "react";
 import img from "../../assets/service.svg";

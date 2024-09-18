@@ -1,4 +1,4 @@
-import React from "react";
+
 import { useStyles } from "./styles";
 import { Box, Text, Title } from "@mantine/core";
 import parse from "html-react-parser";

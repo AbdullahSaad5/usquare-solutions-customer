@@ -3,17 +3,19 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import aboutUs from "../../assets/aboutUs.png";
 import ProjectCard from "../../components/ProjectCard";
+// import ServiceCard from "../home/ServiceCard";
+
 import { backendUrl } from "../../constants";
 import { useStyles } from "./styles";
 
 const Portfolio = () => {
   const { classes } = useStyles();
-  const [portflio, setPortflio] = useState([]);
+  const [portfolio, setPortfolio] = useState([]);
   const [loading, setLoading] = useState(false);
   useEffect(() => {
     setLoading(true);
-    axios.get(backendUrl + "/portfolio/get_all").then((res) => {
-      setPortflio(res.data.data);
+    axios.get(backendUrl + "/project/get_all").then((res) => {
+      setPortfolio(res.data);
       setLoading(false);
     });
   }, []);
@@ -35,10 +37,11 @@ const Portfolio = () => {
         className={classes.content}
       >
         {loading ? (
-          <Loader m="auto"/>
+          <Loader m="auto" />
         ) : (
-          portflio.map((obj, ind) => {
-            return <ProjectCard obj={obj} ind={ind} key={ind} />;
+          portfolio.map((obj, _id) => {
+            return <ProjectCard obj={obj} ind={_id} key={_id} />;
+           
           })
         )}
       </Flex>

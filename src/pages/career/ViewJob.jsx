@@ -1,5 +1,5 @@
 import { Box, Stack, Text, Title, useMantineTheme } from "@mantine/core";
-import React from "react";
+
 import { useStyles } from "./styles";
 import career from "../../assets/career.jpg";
 import parse from "html-react-parser";

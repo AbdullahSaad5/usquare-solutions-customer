@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import {
   Box,
   Center,
@@ -246,14 +247,14 @@ const AboutUs = () => {
           justify={"center"}
           rowGap={"30px"}
         >
-          {people.map((person, ind) => {
+          {people.map((teamMemberName, _id) => {
             return (
-              <Stack key={ind} w={"270px"} spacing={"0px"}>
-                <Image src={person.picture} width={"250px"} radius={"xl"} />
+              <Stack key={_id} w={"270px"} spacing={"0px"}>
+                <Image src={teamMemberName.teamMemberImage} width={"250px"} radius={"xl"} />
                 <Text fw={"bold"} fz={"lg"}>
-                  {person.name}
+                  {teamMemberName.teamMemberName}
                 </Text>
-                <Text color={theme.colors.blue}>{person.job_title}</Text>
+                <Text color={theme.colors.blue}>{teamMemberName.teamMemberTitle}</Text>
               </Stack>
             );
           })}

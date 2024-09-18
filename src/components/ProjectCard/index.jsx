@@ -1,12 +1,13 @@
+/* eslint-disable react/prop-types */
 import { Image, Stack, Text, useMantineTheme } from "@mantine/core";
-import React, { useState } from "react";
+import  { useState } from "react";
 
-const ProjectCard = ({ obj, ind }) => {
+const ProjectCard = ({ obj, _id }) => {
   const theme = useMantineTheme();
   const [show, setShow] = useState(false);
   return (
     <Stack
-      key={ind}
+      key={_id}
       p="20px 50px"
       spacing={"sm"}
       style={{
@@ -21,11 +22,11 @@ const ProjectCard = ({ obj, ind }) => {
       }}
       onMouseLeave={() => setShow(false)}
       onMouseEnter={() => setShow(true)}
-      onClick={() => window.open(obj?.project_link, "_blank")}
+      onClick={() => window.open(obj?.link, "_blank")}
     >
-      <Image src={obj?.picture} width={"200px"} />
+      <Image src={obj?.coverImage} width={"200px"} />
       <Text fw={"bold"} fz={"lg"} color={theme.colors.blue}>
-        {obj?.title}
+        {obj?.shortDescription}
       </Text>
       <Text
         style={{
@@ -46,7 +47,7 @@ const ProjectCard = ({ obj, ind }) => {
         }}
         fz="lg"
       >
-        {obj?.description}
+        {obj?.title}
       </Text>
     </Stack>
   );

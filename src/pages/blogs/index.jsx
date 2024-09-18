@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import {
   Box,
   Loader,
@@ -55,8 +56,8 @@ const Blogs = () => {
               { minWidth: "lg", cols: 3 },
             ]}
           >
-            {blogs.map((obj, ind) => {
-              return <BlogCard obj={obj} ind={ind} key={ind} />;
+            {blogs.map((obj, _id) => {
+              return <BlogCard obj={obj} ind={_id} key={_id} />;
             })}
           </SimpleGrid>
         )}

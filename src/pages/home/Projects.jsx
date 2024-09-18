@@ -1,5 +1,5 @@
 import { Box, Loader, Title, useMantineTheme } from "@mantine/core";
-import React, { useEffect, useState } from "react";
+import  { useEffect, useState } from "react";
 import { useStyles } from "./styles";
 import ServiceCard from "./ServiceCard";
 import { Carousel } from "@mantine/carousel";
@@ -13,8 +13,8 @@ const Projects = () => {
   const [loading, setLoading] = useState(false);
   useEffect(() => {
     setLoading(true);
-    axios.get(backendUrl + "/portfolio/get_recent_six").then((res) => {
-      setPortfolio(res.data.data);
+    axios.get(backendUrl + "/project/get_all").then((res) => {
+      setPortfolio(res.data);
       setLoading(false);
     });
   }, []);
@@ -42,17 +42,17 @@ const Projects = () => {
         {loading ? (
           <Loader my="50px" />
         ) : (
-          portfolio?.map((obj, ind) => {
+          portfolio?.map((obj,_id) => {
             return (
               <Carousel.Slide
-                key={ind}
+                key={_id}
                 style={{ display: "flex", justifyContent: "center" }}
               >
                 <ServiceCard
                   title={obj?.title}
-                  description={obj?.description}
-                  picture={obj?.picture}
-                  link={obj?.project_link}
+                  description={obj?.shortDescription}
+                  picture={obj?.coverImage}
+                  link={obj?.link}
                 />
               </Carousel.Slide>
             );
