@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import { useDisclosure } from "@mantine/hooks";
 import "./App.css";
 import Header from "./components/header";
@@ -8,8 +9,8 @@ import { Route, Routes, useLocation } from "react-router-dom";
 import Services from "./pages/services";
 import ContactUs from "./pages/contactUs";
 import AboutUs from "./pages/aboutus";
-import Career from "./pages/career";
-import Portfolio from "./pages/portfolio";
+// import Career from "./pages/career";
+import Portfolio from "./pages/projects";
 import Products from "./pages/products";
 import Blogs from "./pages/blogs";
 import ViewJob from "./pages/career/ViewJob";
@@ -56,12 +57,13 @@ function App() {
         <Route path="/services/:type" element={<Services />} />
         <Route path="/contact-us" element={<ContactUs />} />
         <Route path="/about-us" element={<AboutUs />} />
-        <Route path="/careers" element={<Career />} />
+        {/* <Route path="/careers" element={<Career />} /> */}
         <Route path="/view-job" element={<ViewJob />} />
         <Route path="/portfolio" element={<Portfolio />} />
         <Route path="/products" element={<Products />} />
         <Route path="/blogs" element={<Blogs />} />
-        <Route path="/view-blog" element={<ViewBlog />} />
+         <Route path="/view-blog/:id" element={<ViewBlog />} />
+
       </Routes>
       <Footer />
     </Box>

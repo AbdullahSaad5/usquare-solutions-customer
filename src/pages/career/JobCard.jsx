@@ -15,10 +15,10 @@ const JobCard = ({ obj }) => {
         <Text fw={"bold"} fz="lg">
           {obj?.title}
         </Text>
-        <Text>Experience: {obj?.experience || "NA"}</Text>
+        <Text>Experience: {obj?.minimumExperience || "NA"}</Text>
       </Stack>
-      <Text>Positions: {obj?.position || "NA"}</Text>
-      <Text>Job Type: {obj?.jobType || "NA"}</Text>
+      <Text>Positions: {obj?.vacancies || "NA"}</Text>
+      <Text>Job Type: {obj?.type || "NA"}</Text>
       <Anchor
         style={{ display: "flex", alignItems: "center" }}
         onClick={() => navigate("/view-job", { state: { job: obj } })}

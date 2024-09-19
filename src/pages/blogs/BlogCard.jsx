@@ -17,7 +17,9 @@ const BlogCard = ({ obj, _id }) => {
         borderRadius: "10px",
         boxShadow: "0px 5px 5px rgb(0,0,0,0.2)",
       }}
-      onClick={() => navigate("/view-blog", { state: { blogData: obj } })}
+      onClick={() => navigate(`/view-blog/${obj._id}`, { state: { blogData: obj } })}
+
+
     >
       <Image src={obj?.blogImage} height={"280px"} />
       <Text fz="xs" align="left">

@@ -75,8 +75,7 @@ const Footer = () => {
           </Text>
           <Text className={classes.contact}>
             <MapPin style={{ alignSelf: "flex-start" }} width={"50px"} />
-            Office No#17, 2nd Floor, Zaki Centre, I-8 Markaz I 8 Markaz I-8,
-            Islamabad, Islamabad Capital Territory 44000
+            21 Street 95, I-8/4 Islamabad ,Islamabad Capital Territory 44000
           </Text>
           <Text className={classes.contact}>
             <ClockHour2 />

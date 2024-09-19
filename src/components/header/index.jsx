@@ -12,7 +12,11 @@ import {
 } from "tabler-icons-react";
 import axios from "axios";
 import { backendUrl } from "../../constants";
-
+//  const data = {
+//     facebook: "https://www.facebook.com/your-page-link",
+//     instagram: "https://www.instagram.com/your-profile-link",
+//     linkedIn: "https://www.linkedin.com/in/your-linkedin-profile",
+//   };
 const Header = ({ opened, toggle }) => {
   const isMobile = useMediaQuery("(max-width: 1100px)");
   const theme = useMantineTheme();
@@ -182,7 +186,7 @@ const Header = ({ opened, toggle }) => {
             to="/portfolio"
             onClick={() => isMobile && toggle()}
           >
-            Portfolio
+            Our Projects
           </Link>
           <Link
             className={classes.link}
@@ -191,13 +195,13 @@ const Header = ({ opened, toggle }) => {
           >
             Our Products
           </Link>
-          <Link
+          {/* <Link
             className={classes.link}
             to="/careers"
             onClick={() => isMobile && toggle()}
           >
             Careers
-          </Link>
+          </Link> */}
           <Link
             className={classes.link}
             to="/about-us"

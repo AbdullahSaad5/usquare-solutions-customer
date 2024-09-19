@@ -36,11 +36,11 @@ const Career = () => {
           OPENING POSITIONS
         </Title>
         <Title order={3} fw={300}>
-          Start's your work with Usquare Solutions
+          Start's your work with USquare Solutions
         </Title>
         <Stack>
-          {jobs.map((obj, ind) => {
-            return <JobCard obj={obj} key={ind} />;
+          {jobs.map((obj, id) => {
+            return <JobCard obj={obj} key={id} />;
           })}
         </Stack>
       </Stack>
