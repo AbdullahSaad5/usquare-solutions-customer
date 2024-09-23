@@ -62,7 +62,7 @@ function App() {
         <Route path="/portfolio" element={<Portfolio />} />
         <Route path="/products" element={<Products />} />
         <Route path="/blogs" element={<Blogs />} />
-         <Route path="/view-blog/:id" element={<ViewBlog />} />
+     <Route path="/view-blog/:id" element={<ViewBlog />} />
 
       </Routes>
       <Footer />
@@ -71,3 +71,4 @@ function App() {
 }
 
 export default App;
+//comment
