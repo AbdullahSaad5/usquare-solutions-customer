@@ -15,10 +15,10 @@ const About = () => {
   return (
     <Flex className={classes.about} gap={"100px"}>
       {isMobile && (
-        <img src={img} height={"300px"} style={{ margin: "auto" }} />
+        <img src={img} height={"300px"} style={{ margin: "auto" }} alt="aboutus" />
       )}
       <Stack align="flex-end" className={classes.aboutSub} spacing={"xl"}>
-        <Title align="center" color={theme.colors.blue} fw={400}>
+        <Title order={2} align="center" color={theme.colors.blue} fw={400}>
           ABOUT US
         </Title>
         <Text>
@@ -36,7 +36,7 @@ const About = () => {
               product on time.
             </Text>
           </Stack>
-          <img src={about1} width={"40px"} />
+          <img src={about1} width={"40px"} alt="Badge" />
         </Flex>
         <Flex align={"flex-start"} gap={"md"}>
           <Stack spacing={0}>
@@ -48,7 +48,7 @@ const About = () => {
               requirements.
             </Text>
           </Stack>
-          <img src={about2} width={"40px"} />
+          <img src={about2} width={"40px"} alt="Time" />
         </Flex>
         <Flex align={"flex-start"} gap={"md"}>
           <Stack spacing={0}>
@@ -60,7 +60,7 @@ const About = () => {
               issue on future.
             </Text>
           </Stack>
-          <img src={about3} width={"40px"} />
+          <img src={about3} width={"40px"} alt="Reliablity" />
         </Flex>
       </Stack>
     </Flex>

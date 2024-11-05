@@ -7,7 +7,7 @@ const ToolsTech = () => {
   const theme = useMantineTheme();
   return (
     <Box className={classes.services}>
-      <Title align="center" color={theme.colors.blue} fw={400}>
+      <Title order={2} align="center" color={theme.colors.blue} fw={400}>
         TOOLS & TECHNOLOGIES
       </Title>
       <Title order={4} align="center" fw={100}>
@@ -20,6 +20,7 @@ const ToolsTech = () => {
             width={"100px"}
             height={"80px"}
             src={new URL(`../../assets/tech${i + 1}.svg`, import.meta.url).href}
+            alt="tech"
           />
         ))}
       </Flex>

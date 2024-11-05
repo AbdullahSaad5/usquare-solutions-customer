@@ -16,7 +16,7 @@ const WhyChooseUs = () => {
   return (
     <Flex className={classes.WhyChooseUs} gap={"100px"}>
       <Stack spacing={"xl"}>
-        <Title color={theme.colors.blue} fw={400}>
+        <Title order={2} color={theme.colors.blue} fw={400}>
           WHY CHOOSE US
         </Title>
         <Title order={3} fw={300}>
@@ -27,7 +27,7 @@ const WhyChooseUs = () => {
           new possibilities and alternative that suit you better.
         </Text>
         <Flex align={"flex-start"} gap={"md"}>
-          <img src={why1} width={"40px"} />
+          <img src={why1} width={"40px"} alt="working_process" />
           <Stack spacing={0}>
             <Title order={4} fw={500}>
               Product Analysis
@@ -38,7 +38,7 @@ const WhyChooseUs = () => {
           </Stack>
         </Flex>
         <Flex align={"flex-start"} gap={"md"}>
-          <img src={why2} width={"40px"} />
+          <img src={why2} width={"40px"} alt="Wireframe or UI/UX Design" />
           <Stack spacing={0}>
             <Title order={4} fw={500}>
               Wireframe or UI/UX Design
@@ -49,7 +49,7 @@ const WhyChooseUs = () => {
           </Stack>
         </Flex>
         <Flex align={"flex-start"} gap={"md"}>
-          <img src={why3} width={"40px"} />
+          <img src={why3} width={"40px"} alt="Product Development" />
           <Stack spacing={0}>
             <Title order={4} fw={500}>
               Product Development
@@ -60,7 +60,7 @@ const WhyChooseUs = () => {
           </Stack>
         </Flex>
         <Flex align={"flex-start"} gap={"md"}>
-          <img src={why4} width={"40px"} />
+          <img src={why4} width={"40px"} alt="Product Testing" />
           <Stack spacing={0}>
             <Title order={4} fw={500}>
               Product Testing
@@ -72,7 +72,7 @@ const WhyChooseUs = () => {
         </Flex>
       </Stack>
       {isMobile && (
-        <img src={img} height={"300px"} style={{ margin: "auto" }} />
+        <img src={img} height={"300px"} style={{ margin: "auto" }} alt="nothing" />
       )}
     </Flex>
   );

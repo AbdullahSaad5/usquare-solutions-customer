@@ -23,7 +23,7 @@ const LetsTalk = () => {
       gap={!isMobile ? "20px" : "100px"}
     >
       <Stack spacing={"xl"}>
-        <Title color={theme.colors.blue} fw={400}>
+        <Title order={2} color={theme.colors.blue} fw={400}>
           LET'S TALK
         </Title>
         <Title order={3} fw={300}>

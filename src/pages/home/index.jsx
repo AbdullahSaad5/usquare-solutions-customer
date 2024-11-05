@@ -36,7 +36,7 @@ const Home = () => {
         ]}
       >
         <Stack justify="center">
-          <Title>Welcome to Usquare Solutions…</Title>
+          <Title order={2}>Welcome to Usquare Solutions…</Title>
           <Text>
             We are a leading digital agency providing the ideal technology
             solutions to all your Development needs, serving globally since 2017.

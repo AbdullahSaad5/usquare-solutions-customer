@@ -20,7 +20,7 @@ const Projects = () => {
   }, []);
   return (
     <Box className={classes.services}>
-      <Title align="center" color={theme.colors.blue} fw={400}>
+      <Title order={2} align="center" color={theme.colors.blue} fw={400}>
         RECENT PROJECTS
       </Title>
       <Title order={4} align="center" fw={100}>

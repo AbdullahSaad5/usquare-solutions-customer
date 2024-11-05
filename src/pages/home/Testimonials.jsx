@@ -31,7 +31,7 @@ const Tetstimonials = () => {
       </Title>
       <Flex gap={"50px"}>
         {isMobile && (
-          <img src={img} height={"300px"} style={{ margin: "auto" }} />
+          <img src={img} height={"300px"} style={{ margin: "auto" }} alt="Testimonails" />
         )}
         <Box w={!isMobile ? "100%" : "60%"}>
           <Carousel
